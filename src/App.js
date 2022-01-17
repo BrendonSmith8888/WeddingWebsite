@@ -9,6 +9,7 @@ function App() {
       <p>How We Met</p>
       <p>Venue</p>
       <p>RSPV</p>
+      <p>Copyright</p>
     </div>
   );
 }
