@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-  color: #030303;
+  color: #13795a;
   font-size: 24px;
   margin-top: 160px;
 }
@@ -40,9 +40,35 @@ img{
   width: 30%;
 }
 
+form{
+  border-color: #13795a;
+  border-radius: 15%;
+  border-style: double;
+  border-width:thick;
+  font-weight: bold;
+  margin-left: 30px;
+  margin-right:650px;
+  padding: 15px;
+}
+
+input{
+  color: #054b36;
+  font-weight: bold;
+}
+
+label{
+  color: #054b36;
+}
+
 p {
   background-color: #5f9ea0;
   color: #000003;
   font-size: 20px;
+  font-weight: bold;
   margin-top: 25px;
+}
+
+select{
+  color: #054b36;
+  font-weight: bold;
 }
