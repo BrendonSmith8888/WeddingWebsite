@@ -1,7 +1,7 @@
 import './App.css';
 import picture from './Test.jpg';
 import React, { Component } from 'react';
-// import {Image} from 'react-native';
+import {Link} from 'react-scroll';
 
 /* function App() {
   return (
@@ -26,26 +26,29 @@ class App extends Component {
   render() {
     return (
       <div className='shadow-1'>
-           <header className='shadow-1'>
-          <ul className='grow'>How We Met</ul>
-          <ul className='grow'>Schedule</ul>
-          <ul className='grow'>Wedding Info</ul>
-          <ul className='grow'>Travel Info</ul>
-          <ul className='grow'>RSPV</ul>
+        <header className='shadow-1'>
+          <ul className='grow'><Link activeClass='active' to='HowWeMet' spy={true} smooth={true}>How We Met</Link></ul>
+          <ul className='grow'><Link activeClass='active' to='Schedule' spy={true} smooth={true}>Schedule</Link></ul>
+          <ul className='grow'><Link activeClass='active' to='WeddingInfo' spy={true} smooth={true}>Wedding Info</Link></ul>
+          <ul className='grow'><Link activeClass='active' to='TravelInfo' spy={true} smooth={true}>Travel Info</Link></ul>
+          <ul className='grow'><Link activeClass='active' to='RSPV' spy={true} smooth={true}>RSPV</Link></ul>
         </header>
+        <div>
+
+        </div>
         <body className='shadow-1'>  
           <img alt="test" src={picture} />
-          <h1>Welcome to Tracey and Jamie's Wedding</h1>    
-          <h2>How We Met</h2>
-          <p>Cayman Islands</p>
-          <h2>Schedule</h2>
-          <p>TBC</p>
-          <h2>Wedding</h2>
-          <p>TBC</p>
-          <h2>Travel Info</h2>
-          <p>Somewhere in South Africa</p>
-          <h2>RSPV</h2>
-          <p>Reply Yes or No</p>
+          {/* <h1>Welcome to Tracey and Jamie's Wedding</h1>   */}
+          <h2 id='HowWeMet' style={{marginLeft:750}}>How We Met</h2>
+          <p style={{marginLeft:750}}>Cayman Islands</p>
+          <h2 id='Schedule' style={{marginLeft:750}}>Schedule</h2>
+          <p style={{marginLeft:750}}>TBC</p>
+          <h2 id='WeddingInfo' style={{marginRight:750}}>Wedding Info</h2>
+          <p style={{marginRight:750}}>TBC</p>
+          <h2 id='TravelInfo' style={{marginRight:750}}>Travel Info</h2>
+          <p style={{marginRight:750}}>Somewhere in South Africa</p>
+          <h2 id='RSPV' style={{marginRight:750}}>RSPV</h2>
+          <p style={{marginRight:750}}>Reply Yes or No</p>
         </body>
       </div>
     );
