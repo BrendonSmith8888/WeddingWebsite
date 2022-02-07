@@ -3,25 +3,6 @@ import picture from "./Test.jpg";
 import React, { Component } from "react";
 import { Link } from "react-scroll";
 
-/* function App() {
-  return (
-    <div className='weddingMain' style={{ backgroundColor: '#5f9ea0'}}>
-      <header>
-        <p>Insert Top Navigation links</p>
-      </header>
-      <body>
-        <img alt='test' src={picture} style={{height: 800, width: 800}} />
-        <h1>Tracey and Jamie's Wedding</h1>
-        <p>How We Met</p>
-        <p>Schedule</p>
-        <p>Wedding</p>
-        <p>Travel Info</p>
-        <p>Copyright</p>
-      </body> 
-    </div>
-  );
-} */
-
 class App extends Component {
   constructor(props) {
     super(props);
