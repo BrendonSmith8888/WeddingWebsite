@@ -4,39 +4,31 @@ import React, { Component } from "react";
 import { Link } from "react-scroll";
 
 class App extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-    this.state = { isGoing: true, value: "" };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleChange2 = this.handleChange2.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {
+      selectedOption: "Yes"
+    }
   }
-
-  handleChange(event) {
-    this.setState({ value: event.target.value });
+  handleFormSubmit = formSubmitEvent => {
+    if(this.state.selectedOption==="Yes"){
+      formSubmitEvent.preventDefault();
+      alert("You are going to the event")
+    }else{
+      formSubmitEvent.preventDefault();
+      alert("You are not going to the event")
+    }
+    
   }
-
-  handleChange2(event) {
-    this.setState({ value2: event.target.value2 });
-  }
-
-  handleInputChange(event) {
-    const target = event.target;
-    const value3 = target.type === 'checkbox' ? target.checked : target.value3;
-    const name = target.name;
-
-    this.setState({ [name]: value3 });
-  }
-
-  handleSubmit(event) {
-    alert("You are going to the Wedding: " + this.state.value);
-    event.preventDefault();
+  handleOptionChange = changeEvent => {
+    this.setState({
+      selectedOption: changeEvent.target.value
+    })
   }
   render() {
     return (
-      <div className="shadow-1">
-        <header className="shadow-1">
+      <div>
+        <header>
           <ul className="grow">
             <Link activeClass="active" to="HowWeMet" spy={true} smooth={true}>
               How We Met
@@ -68,10 +60,8 @@ class App extends Component {
             </Link>
           </ul>
         </header>
-        <div></div>
-        <body className="shadow-1">
+        <body>
           <img alt="test" src={picture} />
-          {/* <h1>Welcome to Tracey and Jamie's Wedding</h1>   */}
           <h2 id="HowWeMet" style={{ marginLeft: 750 }}>
             How We Met
           </h2>
@@ -91,15 +81,10 @@ class App extends Component {
           <h2 id="RSVP" style={{ marginTop: 125, marginRight: 650 }}>
             RSVP
           </h2>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleFormSubmit}>
             <ul>
               <label>Name:</label>
-              <input
-                onChange={this.handleChange}
-                style={{ marginLeft: 75 }}
-                type={"text"}
-                value={this.state.value}
-              />
+              <input style={{ marginLeft: 75 }} type={"text"} />
             </ul>
             <ul>
               <label>Email Address:</label>
@@ -108,28 +93,26 @@ class App extends Component {
             <ul>
               <label>Yes:</label>
               <input
-                checked={this.state.isGoing}
-                name="isGoing"
-                onChange={this.handleInputChange}
+                checked={this.state.selectedOption==="Yes"}
+                name="rsvp"
+                onChange={this.handleOptionChange}
                 style={{ marginLeft: 15 }}
-                type={"checkbox"}
+                type={"radio"}
+                value="Yes"
               />
               <label style={{ marginLeft: 150 }}>No:</label>
               <input
-                checked={!this.state.isGoing}
-                name="isNotGoing"
-                onChange={this.handleInputChange}
+                checked={this.state.selectedOption==="No"}
+                name="rsvp"
+                onChange={this.handleOptionChange}
                 style={{ marginLeft: 15 }}
-                type={"checkbox"}
+                type={"radio"}
+                value="No"
               />
             </ul>
             <ul>
               <label>Dietary Options:</label>
-              <select
-                style={{ marginLeft: 5 }}
-                value={this.state.value2}
-                onChange={this.handleChange2}
-              >
+              <select style={{ marginLeft: 5 }}>
                 <option value="Normal">Normal</option>
                 <option value="Halaal">Halaal</option>
                 <option value="Vegetarian">Vegetarian</option>
