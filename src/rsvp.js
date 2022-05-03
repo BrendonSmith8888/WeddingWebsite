@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
 
-class TravelInfo extends Component{
+class RSVP extends Component{
     render(){
         return(
-            <div id="travelinfo">
+            <div id="rsvp">
                 <body>
                 <nav><Link to="/">Home</Link></nav>
-                    <h1>Travel Info</h1> 
+                    <h1>RSVP</h1> 
                 </body>
             </div>
         );
     }
 }
 
-export default TravelInfo;
+export default RSVP;

@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom";
 
 class Schedule extends Component{
     render(){
         return(
-            <div >
+            <div id="schedule">
                 <body>
-                    <h1 id="ourstory">Our Story</h1> 
+                <nav><Link to="/">Home</Link></nav>
+                    <h1>Schedule</h1> 
                 </body>
             </div>
         );
