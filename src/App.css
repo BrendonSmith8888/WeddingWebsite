@@ -1,85 +1,120 @@
 div{
-  background-color: #5f9ea0;
+  align-items: center;
+  align-content: center;
+  background-color: #ffffff;
   flex: 1;
+  justify-content: center;
   width: 100%;
 }
 
 header {
   align-items: center;
-  border: 2px solid black;
-  color: #050505;
+  border: 2px solid rgb(136, 135, 163);
+  color: rgb(119, 118, 158);
   display: flex;
-  flex-direction: row;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: bold;
+  flex-direction: column;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
   justify-content: center;
-  min-height: 15vh;
 }
 
 body {
   align-items: center;
-  background-image: url('./Test2.png');
+  background-image: url('./Nina_Trace_Website_2.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
+  height: auto;
   justify-content: center;
+  width: auto;
 }
 
 h1 {
-  color: #050505;
+  color: rgb(136, 135, 163);
   font-size: 30px;
-  margin-top: 180px;
 }
 
 h2 {
-  color: #13795a;
+  color: rgb(136, 135, 163);
   font-size: 24px;
-  margin-top: 160px;
-}
-img{
-  margin-top: 180px;
-  width: 30%;
+  margin-top: 110px;
 }
 
 form{
-  border-color: #13795a;
+  border-color: rgb(136, 135, 163);
   border-radius: 15%;
   border-style: double;
   border-width:thick;
+  display: flex;
+  flex-direction: column;
   font-weight: bold;
-  margin-left: 30px;
-  margin-right:650px;
-  padding: 15px;
+  margin-left: 650px;
+  width: 44%;
+}
+
+img{
+  height: 100%;
+  margin-top: 30%;
+  width: 50%;
 }
 
 input{
-  color: #054b36;
+  color: rgb(136, 135, 163);
   font-weight: bold;
+  margin-right: 180px;
 }
 
 label{
-  color: #054b36;
+  color: rgb(136, 135, 163);
+  display: flex;
+  flex-direction: column;
 }
 
 p {
-  background-color: #5f9ea0;
-  color: #000003;
+  color: rgb(136, 135, 163);
   font-size: 20px;
   font-weight: bold;
-  margin-top: 25px;
 }
 
 select{
-  color: #054b36;
+  color: #abafad;
   font-weight: bold;
 }
 
 ul.grow{
-  border: 1px solid white;
+  align-items: center;
+  align-content: center;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 50%;
-/*   border-style: outset; */
-  box-shadow:  0px 0px 10px 10px white inset;
+  box-shadow:  0px 0px 10px 10px rgb(255, 255, 255) inset;
   cursor: pointer;
-  margin: 20px;
-  padding: 15px ;
+  justify-content: center;
+}
+
+ul.row1{
+  color: rgb(21, 83, 15);
+  display: flex;
+  flex-direction: row;
+  font-family: cursive;
+  font-size: 1.4vw;
+  font-weight: bold;
+  justify-content: center;
+  width: 50%;
+}
+ul.row2{
+  color: rgb(21, 83, 15);
+  display: flex;
+  flex-direction: row;
+  font-family: cursive;
+  font-size: 1.4vw;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 120px;
+  width: 50%;
+}
+
+a{
+  color: rgb(21, 83, 15);
 }
